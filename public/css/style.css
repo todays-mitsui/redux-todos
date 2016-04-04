@@ -16,3 +16,26 @@ body {
 li.completed {
   text-decoration: line-through;
 }
+
+footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+footer ul::after {
+  content: '';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+
+footer li {
+  float: left;
+}
+footer li::before {
+  content: ', ';
+}
+footer li:first-child::before {
+  content: '';
+}

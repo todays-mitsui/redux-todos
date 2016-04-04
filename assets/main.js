@@ -7,7 +7,7 @@ import App from './components/App';
 
 let store = createStore(todoApp);
 
-import { addTodo } from './actions';
+import { addTodo, setVisibilityFilter } from './actions';
 store.dispatch(addTodo('Hello,react!'));
 store.dispatch(addTodo('Hello,redux!'));
 

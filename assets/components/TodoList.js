@@ -2,8 +2,14 @@ import React, { PropTypes } from 'react';
 import Todo from './Todo';
 
 
-const TodoList = ({ todos }) => {
-  const items = todos.map((todo) => <Todo key={todo.id} {...todo} />);
+const TodoList = ({ todos, onTodoClick }) => {
+  const items = todos.map((todo) => {
+    return (<Todo
+      key={todo.id}
+      onTodoClick={() => onTodoClick(todo.id)}
+      {...todo}
+    />);
+  });
 
   return (<ul>{items}</ul>);
 };
